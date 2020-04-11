@@ -1,0 +1,20 @@
+
+module "vpc" {
+  source                     = "./module/vpc"
+  vpc_cidr                   = "${var.vpc_cidr}"
+  public_subnet              = "${var.public_subnet}"
+  external_subnet            = "${var.external_subnet}"
+  internal_subnet            = "${var.internal_subnet}"
+  public_availability_zone   = "${var.public_availability_zone}"
+  external_availability_zone = "${var.external_availability_zone}"
+  internal_availability_zone = "${var.internal_availability_zone}"
+  vpc_tag                    = "${var.vpc_tag}"
+  igw_tag                    = "${var.igw_tag}"
+  public_subnet_tag          = "${var.public_subnet_tag}"
+  external_subnet_tag        = "${var.external_subnet_tag}"
+  internal_subnet_tag        = "${var.internal_subnet_tag}"
+  public_rt_name             = "${var.public_rt_name}"
+  external_rt_name           = "${var.external_rt_name}"
+  internal_rt_name           = "${var.internal_rt_name}"
+  region                     = "${var.region}"
+}
